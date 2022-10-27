@@ -1,0 +1,33 @@
+import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+import Home from '../screens/Home';
+import LogIn from '../screens/LogIn';
+import ProDucts from '../screens/ProDucts';
+import Welcome from '../screens/Welcome';
+
+const Stack = createStackNavigator();
+
+function StackNavigator() {
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false
+      }}
+    >
+      <Stack.Screen name="Welcome" component={Welcome} />
+      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Login" component={LogIn} />
+      <Stack.Screen name="Products" component={ProDucts} />
+    </Stack.Navigator>
+  );
+}
+
+const MainNavigator = () => {
+    return (
+        <NavigationContainer>
+            <StackNavigator>
+            </StackNavigator>
+        </NavigationContainer>
+    )
+}
+export default MainNavigator;
