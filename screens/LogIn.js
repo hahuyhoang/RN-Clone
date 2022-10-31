@@ -1,6 +1,5 @@
 import { View, Text, SafeAreaView, ImageBackground, Image, TextInput, StyleSheet, TouchableOpacity, KeyboardAvoidingView } from 'react-native'
 import React, { useState } from 'react'
-import { Entypo } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 const LogIn = ({ navigation }) => {
   const [getPasswordVisible, setPasswordVisible] = useState(false)
@@ -53,9 +52,9 @@ const LogIn = ({ navigation }) => {
             </TouchableOpacity>
           </View>
           <View className="mt-5 w-11/12  ">
-            <TouchableOpacity className="bg-green-500 items-center h-14 justify-center rounded-2xl" onPress={() => { navigation.navigate('Home') }}>
+            <TouchableOpacity style={styles.green} className="items-center h-14 justify-center rounded-2xl" onPress={() => { navigation.navigate('Home') }}>
               <View>
-                <Text style={styles.font} className="text-white text-lg">Get Started</Text>
+                <Text style={styles.font} className="text-white text-lg">LogIn</Text>
               </View>
             </TouchableOpacity>
           </View>
@@ -86,4 +85,7 @@ const styles = StyleSheet.create({
   font: {
     fontFamily: 'Gilroy-Light'
   },
+  green:{
+    backgroundColor: '#53b175'
+  }
 })

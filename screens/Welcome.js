@@ -20,7 +20,7 @@ const Welcome = ({ navigation }) => {
         <Text style={styles.font} className="text-white text-2xl">to our store</Text>
         <Text style={styles.font} className="text-slate-300">Ger your groceries in as fast as one hour</Text>
         <View className="mt-14 w-11/12">
-          <TouchableOpacity className="bg-green-500 items-center h-14 justify-center rounded-2xl" onPress={() => { navigation.navigate('Login') }}>
+          <TouchableOpacity style={styles.green} className="bg-green-500 items-center h-14 justify-center rounded-2xl" onPress={() => { navigation.navigate('Login') }}>
             <View>
               <Text style={styles.font} className="text-white text-lg">Get Started</Text>
             </View>
@@ -46,5 +46,8 @@ const styles = StyleSheet.create({
   },
   button: {
     width: '50%'
+  },
+  green:{
+    backgroundColor: '#53b175'
   }
 })

@@ -4,6 +4,7 @@ import Home from '../screens/Home';
 import LogIn from '../screens/LogIn';
 import ProDucts from '../screens/ProDucts';
 import Welcome from '../screens/Welcome';
+import MyTabs from '../screens/BottomTab/MyTabs';
 
 const Stack = createStackNavigator();
 
@@ -15,7 +16,7 @@ function StackNavigator() {
       }}
     >
       <Stack.Screen name="Welcome" component={Welcome} />
-      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Home" component={MyTabs} />
       <Stack.Screen name="Login" component={LogIn} />
       <Stack.Screen name="Products" component={ProDucts} />
     </Stack.Navigator>

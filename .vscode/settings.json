@@ -1,5 +1,5 @@
 {
-    "terminal.integrated.fontFamily": "monospace",
+    "terminal.integrated.fontFamily": "'cascadia code'",
     "notebook.outputFontFamily": "'cascadia code'",
     "markdown.preview.fontFamily": "'cascadia code'",
     "editor.inlayHints.fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
