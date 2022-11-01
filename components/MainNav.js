@@ -7,22 +7,32 @@ import Welcome from '../screens/Welcome';
 import MyTabs from '../screens/BottomTab/MyTabs';
 import Register from '../screens/Register';
 import Checkcode from '../screens/Checkcode';
+import { useContext } from 'react';
+import { AuthContext } from '../screens/context/AuthContext';
 
 const Stack = createStackNavigator();
 
 function StackNavigator() {
+  const {userInfo} = useContext(AuthContext)
   return (
     <Stack.Navigator
       screenOptions={{
         headerShown: false
       }}
     >
-      <Stack.Screen name="Welcome" component={Welcome} />
+      {userInfo.token ? (
+        <>
       <Stack.Screen name="Home" component={MyTabs} />
+      <Stack.Screen name="Products" component={ProDucts} />
+
+      </>) :(
+        <>
+      <Stack.Screen name="Welcome" component={Welcome} />
       <Stack.Screen name="Login" component={LogIn} />
       <Stack.Screen name="Register" component={Register} />
       <Stack.Screen name="Checkcode" component={Checkcode} />
-      <Stack.Screen name="Products" component={ProDucts} />
+      </>
+      )}
     </Stack.Navigator>
   );
 }

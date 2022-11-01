@@ -5,7 +5,9 @@ const Register = ({ navigation }) => {
     const [getPasswordVisible, setPasswordVisible] = useState(false)
     return (
 
-        <KeyboardAvoidingView className="flex-1">
+        <KeyboardAvoidingView
+            behavior={Platform.OS === "ios" ? "padding" : "height"}
+            className="flex-1">
 
             <View className="flex-1">
                 <View className="flex-1" >
